@@ -30,13 +30,14 @@ jobs:
           name: Run tests
           command: npm test
  
-  build-test-deploy2:
+  build-test-deploy:
     docker:
       - image: cimg/node:17.1.0
     steps:
       - run:
           name: deploy on surge
-          command: echo hello
+          # command: surge --project ./path/to/your-project --domain your-project.surge.sh
+          command: ls
 
       
     
@@ -58,8 +59,6 @@ workflows:
   sample:
     jobs:
       - build-and-test
-      - build-test-deploy2:
-          requires:
-              - build_and_test
+      - build-test-deploy
   #     # For running simple node tests, you could optionally use the node/test
   #     # - node/test
