@@ -42,23 +42,23 @@ jobs:
     
 
 workflows:
-#   version: 2
-#     build-test-deploy:
-#       jobs:
-#         - build_and_test
-#         - deploy_to_staging:
-#             requires:
-#               - build_and_test
-#             filters:
-#               branches:
-#                 only: master
+  version: 2
+    build-test-deploy:
+      jobs:
+        - build_and_test
+        - deploy_to_staging:
+            requires:
+              - build_and_test
+            filters:
+              branches:
+                only: master
   # Below is the definition of your workflow.
   # Inside the workflow, you provide the jobs you want to run, e.g this workflow runs the build-and-test job above.
   # CircleCI will run this workflow on every commit.
   # For more details on extending your workflow, see the configuration docs: https://circleci.com/docs/2.0/configuration-reference/#workflows
-  sample:
-    jobs:
-      - build-and-test
-      - build-and-test2
-      # For running simple node tests, you could optionally use the node/test
-      # - node/test
+  # sample:
+  #   jobs:
+  #     - build-and-test
+  #     - build-and-test2
+  #     # For running simple node tests, you could optionally use the node/test
+  #     # - node/test
