@@ -29,6 +29,11 @@ jobs:
       - run:
           name: Run tests
           command: npm test
+      - run:
+          name: deploy on surge
+          # command: surge --project ./build --domain natalias-pc
+          # command:  npx surge build/ https://natalias-cd-practical-development.surge.sh
+          command: ls
  
   build-test-deploy:
     docker:
