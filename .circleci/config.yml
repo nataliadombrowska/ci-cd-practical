@@ -59,6 +59,9 @@ workflows:
   sample:
     jobs:
       - build-and-test
-      - build-test-deploy
+      - build-test-deploy:
+          requires:
+            - build-and-test
+
   #     # For running simple node tests, you could optionally use the node/test
   #     # - node/test
