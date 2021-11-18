@@ -30,28 +30,28 @@ jobs:
           name: Run tests
           command: npm test
 
-    build-test-deploy:
-      docker:
-        image: cimg/node:17.1.0
-      steps:
-        -run:
-          name: deploy on surge
-          command: --surge --project C:\dev\ci-cd-practical --natalias-cd-practical-development.surge.sh
+  build-test-deploy:
+    docker:
+      image: cimg/node:17.1.0
+    steps:
+      -run:
+        name: deploy on surge
+        command: --surge --project C:\dev\ci-cd-practical --natalias-cd-practical-development.surge.sh
 
       
     
 
-workflows:
-  # version: 2
-  #   build-test-deploy:
-  #     jobs:
-  #       - build_and_test
-  #       - deploy_to_staging:
-  #           requires:
-  #             - build_and_test
-  #           filters:
-  #             branches:
-  #               only: master
+# workflows:
+#   version: 2
+#     build-test-deploy:
+#       jobs:
+#         - build_and_test
+#         - deploy_to_staging:
+#             requires:
+#               - build_and_test
+#             filters:
+#               branches:
+#                 only: master
   # Below is the definition of your workflow.
   # Inside the workflow, you provide the jobs you want to run, e.g this workflow runs the build-and-test job above.
   # CircleCI will run this workflow on every commit.
