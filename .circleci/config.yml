@@ -37,7 +37,8 @@ jobs:
       - run:
           name: deploy on surge
           # command: surge --project ./build --domain natalias-pc
-          command:  npx surge build/ https://natalias-cd-practical-development.surge.sh
+          # command:  npx surge build/ https://natalias-cd-practical-development.surge.sh
+          command: ls
 
       
     
