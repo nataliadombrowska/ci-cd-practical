@@ -36,8 +36,8 @@ jobs:
     steps:
       - run:
           name: deploy on surge
-          # command: surge --project ./path/to/your-project --domain your-project.surge.sh
-          command: ls
+          # command: surge --project ./build --domain natalias-pc
+          command:  npx surge build/ https://natalias-cd-practical-development.surge.sh
 
       
     
