@@ -35,8 +35,8 @@ jobs:
       - image: cimg/node:17.1.0
     steps:
       - run:
-        name: deploy on surge
-        command: --surge --project C:\dev\ci-cd-practical --natalias-cd-practical-development.surge.sh
+          name: deploy on surge
+          command: echo hello
 
       
     
