@@ -32,7 +32,7 @@ jobs:
 
   build-test-deploy:
     docker:
-      image: cimg/node:17.1.0
+      - image: cimg/node:17.1.0
     steps:
       -run:
         name: deploy on surge
