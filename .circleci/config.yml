@@ -59,5 +59,6 @@ workflows:
   sample:
     jobs:
       - build-and-test
-      # For running simple node tests, you could optionally use the node/test job from the orb to replicate and replace the job above in fewer lines.
+      - build-and-test2
+      # For running simple node tests, you could optionally use the node/test
       # - node/test
